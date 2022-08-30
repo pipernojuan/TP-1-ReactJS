@@ -1,12 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import NavBar from "./components/navBar/NavBar.js";
+import "./App.css";
+import logo from "./components/NavBar/Logo.jpg";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer.js"
+import SuperForm from "./components/SuperForm/SuperForm.js";
+import ItemCount from "./components/ItemCount/ItemCount.js";
+
 
 function App() {
+
   return (
+    
     <div className="App">
-      <header className="App-header">
+    <NavBar/>
+
+    <header className="App-header">
+      <ItemListContainer titulo="Cerámica de Lu" subtitulo="Piezas únicas en cerámica"/>
+      <ItemCount nombreProducto= "Sumá a tu carrito"/>
+
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+          <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
@@ -20,6 +32,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;
